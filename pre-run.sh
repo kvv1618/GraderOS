@@ -8,4 +8,8 @@ sudo apt-get -y install build-essential valgrind nano patch diffutils curl faker
 git config --global user.email varun.kesharaju@gmail.com
 git config --global user.name kvv1618
 
-git clone https://github.com/UMBC-CMSC421/linux.git
+sudo chmod -R 777 /usr/src
+cd /usr/src
+git clone https://github.com/UMBC-CMSC421/linux.git project0
+
+cd project0
