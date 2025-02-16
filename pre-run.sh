@@ -9,6 +9,7 @@ sudo apt install -y vim htop
 git config --global user.email varun.kesharaju@gmail.com
 git config --global user.name kvv1618
 
+sudo rm -rf GraderOS
 git clone https://github.com/kvv1618/GraderOS.git
 
 sudo chmod -R 777 /usr/src
@@ -16,6 +17,6 @@ cd /usr/src
 git clone https://github.com/UMBC-CMSC421/linux.git project0
 
 cd project0
-cp ~/GraderOS/working-config.txt .config
 make mrproper
+cp ~/GraderOS/working-config.txt .config
 make -j$(($(nproc) - 2)) bindeb-pkg
