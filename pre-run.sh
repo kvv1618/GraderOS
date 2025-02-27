@@ -18,5 +18,5 @@ git clone https://github.com/UMBC-CMSC421/linux.git project0
 
 cd project0
 make mrproper
-cp ~/GraderOS/working-config.txt .config
+cp ~/GraderOS/given_config.txt .config
 make -j$(($(nproc) - 2)) bindeb-pkg
