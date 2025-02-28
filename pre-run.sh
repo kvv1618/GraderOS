@@ -9,7 +9,7 @@ sudo apt install -y vim htop
 git config --global user.email varun.kesharaju@gmail.com
 git config --global user.name kvv1618
 
-sudo rm -rf GraderOS
+sudo rm -rf ~/GraderOS
 git clone https://github.com/kvv1618/GraderOS.git
 
 sudo chmod -R 777 /usr/src
