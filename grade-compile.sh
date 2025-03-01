@@ -8,6 +8,7 @@ git config --global user.name kvv1618
 
 git clone $1
 cd project0*
+make mrproper
 cp ~/GraderOS/given_config.txt .config
 make -j$(($(nproc) - 2)) bindeb-pkg
 
