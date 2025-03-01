@@ -10,3 +10,6 @@ git clone $1
 cd project0*
 cp ~/GraderOS/given_config.txt .config
 make -j$(($(nproc) - 2)) bindeb-pkg
+
+cd ../
+sudo dpkg -i *5.15*.deb
