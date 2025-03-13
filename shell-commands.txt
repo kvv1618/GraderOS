@@ -1,0 +1,13 @@
+
+abcd
+ls
+pwd
+mkdir varunBase
+ps
+/proc /cpuinfo
+/proc /loadavg
+/proc /pid/status
+/proc /pid/sched
+history
+exit 123
+exit
