@@ -13,4 +13,4 @@ make clean
 make
 
 exec_file=$(find . -maxdepth 1 -type f -executable | head -n 1)
-$exec_file
+valgrind --leak-check=full $exec_file
