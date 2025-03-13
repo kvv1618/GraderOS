@@ -14,3 +14,7 @@ make
 
 exec_file=$(find . -maxdepth 1 -type f -executable | head -n 1)
 $exec_file
+
+abcd
+ls
+pwd
