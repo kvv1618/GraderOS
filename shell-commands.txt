@@ -1,13 +1,13 @@
 
 abcd
-ls
 pwd
 mkdir varunBase
-ps
+ls
 /proc /cpuinfo
 /proc /loadavg
-/proc /pid/status
-/proc /pid/sched
+ps
+/proc /2122/status
+/proc /2122/sched
 history
 exit 123
 exit
