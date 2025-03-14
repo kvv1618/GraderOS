@@ -7,7 +7,8 @@ sudo rm -rf ~/Documents/*
 git config --global user.email varun.kesharaju@gmail.com
 git config --global user.name kvv1618
 
-git clone $1
+repo_url="https://github.com/UMBC-CMSC421/project1-$1.git"
+git clone "$repo_url"
 cd project1*
 make clean
 make
