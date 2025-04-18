@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+cd project2*
+cd user_space
 cp ~/GraderOS/user_tests.Makefile Makefile
 make clean
 make
