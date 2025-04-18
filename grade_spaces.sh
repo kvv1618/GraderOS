@@ -13,17 +13,23 @@ cd project2*
 
 cd user_space
 make clean
-
-user_space_test_exec=$(find . -maxdepth 1 -type f -executable | head -n 1)
-
 make
-valgrind --leak-check=full ./main
+exec=$(find . -maxdepth 1 -type f -executable | head -n 1)
+valgrind --leak-check=full $exec
 
-valgrind --leak-check=full $user_space_test_exec
+cp ../tests/user_tests.c .
+sed -i 's/^SRCS *= *main\.c/SRCS = user_tests.c/' Makefile
+make clean
+make
+exec=$(find . -maxdepth 1 -type f -executable | head -n 1)
+valgrind --leak-check=full $exec
 
 cd ..
 make clean
 make
-cd kernel-space
-gcc -o  kernel_test kernel_test.c
-valgrind --leak-check=full ./kernel_test
+cd user_space
+cp ../tests/kernel_tests.c .
+sed -i 's/^SRCS *= *user_test\.c/SRCS = kernel_tests.c/' Makefile
+exec=$(find . -maxdepth 1 -type f -executable | head -n 1)
+valgrind --leak-check=full $exec
+
