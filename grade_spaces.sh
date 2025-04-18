@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-cd ../
+cd project2*
 make clean
 cp ~/GraderOS/given_config.txt .config
 make -j$(($(nproc) - 2)) bindeb-pkg
