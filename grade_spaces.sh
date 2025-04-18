@@ -8,4 +8,4 @@ make -j$(($(nproc) - 2)) bindeb-pkg
 
 cd user_space
 cp ../tests/kernel_tests.c .
-./grade_kernel_space_test.sh
+bash ~/GraderOS/grade_kernel_space_test.sh
