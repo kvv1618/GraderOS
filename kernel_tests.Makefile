@@ -12,7 +12,7 @@ CFLAGS = -g -Wall -O0 -std=c99 -pthread
 LDFLAGS = -lm -pthread
 
 TARGET = kernel_tests     # Output file name
-SRCS = kernel_tests.c queue.c  # Source files
+SRCS = kernel_tests.c  # Source files
 OBJS = $(SRCS:.c=.o)    # Object files (automatically replaces .c with .o)
 
 # Default target
