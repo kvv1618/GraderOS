@@ -24,11 +24,6 @@ make
 exec=$(find . -maxdepth 1 -type f -executable | head -n 1)
 valgrind --leak-check=full $exec
 
-cd ../kernel_space
-make clean
-make
-
-cd ../user_space
 cp ../tests/kernel_tests.c .
 sed -i 's/^SRC *= *user_tests\.c/SRC = kernel_tests.c/' Makefile
 make clean
