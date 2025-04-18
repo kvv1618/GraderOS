@@ -26,7 +26,8 @@ valgrind --leak-check=full $exec
 
 cd ../
 make clean
-make -j$(($(nproc) - 2))
+cp ~/GraderOS/given_config.txt .config
+make -j$(($(nproc) - 2)) bindeb-pkg
 
 cd user_space
 cp ../tests/kernel_tests.c .
