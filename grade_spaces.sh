@@ -24,12 +24,14 @@ make
 exec=$(find . -maxdepth 1 -type f -executable | head -n 1)
 valgrind --leak-check=full $exec
 
-cd ..
+cd ../kernel_space
 make clean
 make
-cd user_space
+
+cd ../user_space
 cp ../tests/kernel_tests.c .
 sed -i 's/^SRCS *= *user_test\.c/SRCS = kernel_tests.c/' Makefile
+make clean
+make
 exec=$(find . -maxdepth 1 -type f -executable | head -n 1)
 valgrind --leak-check=full $exec
-
