@@ -59,7 +59,7 @@ fi
 stat b.txt
 
 cd ~/Documents/project4*
-cd Fuse*
+cd F*
 make unmount_memefs
 make mount_memefs
 ls /tmp/memefs
