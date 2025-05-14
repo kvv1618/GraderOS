@@ -2,7 +2,7 @@
 set -e
 
 sudo rm -rf *
-sudo rm -rf /tmp/memefs
+sudo rm -rf /tmp/memefs/
 
 git config --global user.email varun.kesharaju@gmail.com
 git config --global user.name kvv1618
