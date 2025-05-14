@@ -36,9 +36,9 @@ fi
 echo "Creating files in memefs" >> a.txt
 ls -la
 
-echo "" > tf1.txt
-echo "" > tf2
-echo "" > tf1.wav
+touch tf1.txt
+touch tf2
+touch tf1.wav
 ls -lhtr
 stat tf1.txt
 stat tf2
