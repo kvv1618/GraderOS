@@ -10,6 +10,7 @@ git config --global user.name kvv1618
 repo_url="https://github.com/UMBC-CMSC421/project4-$1.git"
 git clone "$repo_url"
 
+cd proj*
 cd Fuse*
 make clean
 make all
