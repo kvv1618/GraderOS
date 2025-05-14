@@ -14,10 +14,10 @@ cd proj*
 cd Fuse*
 make clean
 make all
-if [ -f memfs ]; then
-    echo "memfs executable present"
+if [ -f memefs ]; then
+    echo "memefs executable present"
 else
-    echo "memfs executable not present"
+    echo "memefs executable not present"
 fi
 
 make create_dir
