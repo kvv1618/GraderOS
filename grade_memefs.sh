@@ -6,7 +6,7 @@ sudo rm -rf *
 git config --global user.email varun.kesharaju@gmail.com
 git config --global user.name kvv1618
 
-repo_url="https://github.com/UMBC-CMSC421/project2-$1.git"
+repo_url="https://github.com/UMBC-CMSC421/project4-$1.git"
 git clone "$repo_url"
 
 cd Fuse*
