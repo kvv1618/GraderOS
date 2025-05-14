@@ -10,7 +10,7 @@ repo_url="https://github.com/UMBC-CMSC421/project4-$1.git"
 git clone "$repo_url"
 
 cd proj*
-cd Fuse*
+cd F*
 make clean
 make all
 if [ -f memefs ]; then
