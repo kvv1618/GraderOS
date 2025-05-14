@@ -2,7 +2,6 @@
 set -e
 
 sudo rm -rf *
-sudo rm -rf /tmp/memefs/*
 
 git config --global user.email varun.kesharaju@gmail.com
 git config --global user.name kvv1618
@@ -65,3 +64,5 @@ make mount_memefs
 
 cd /tmp/memefs
 ls -l
+
+make unmount_memefs
