@@ -12,6 +12,12 @@ git clone "$repo_url"
 cd Fuse*
 make clean
 make all
+if [ -f memfs ]; then
+    echo "memfs executable present"
+else
+    echo "memfs executable not present"
+fi
+
 make create_dir
 make create_memefs_img
 make mount_memefs
@@ -29,24 +35,25 @@ fi
 echo "Creating files in memefs" >> a.txt
 ls -la
 
-touch test_file.txt
-touch test_file2
-touch test_file.wav
-ls -l
-stat test_file.txt
-stat test_file2
-stat test_file.wav
+touch tf1.txt
+touch tf2
+touch tf1.wav
+ls -lhtr
+stat tf1.txt
+stat tf2
+stat tf1.wav
 
 echo "Creating another file in memefs" >> b.txt
 echo "Appending more text to file" >> a.txt
 cat a.txt
+echo "-------------------------------------------------"
 cat b.txt
 
-rm test_file.txt
-if [ ! -f test_file.txt ]; then
-    echo "test_file.txt deleted successfully"
+rm tf1.txt
+if [ ! -f tf1.txt ]; then
+    echo "tf1.txt deleted successfully"
 else
-    echo "test_file.txt not deleted"
+    echo "tf1.txt not deleted"
 fi
 stat b.txt
 
